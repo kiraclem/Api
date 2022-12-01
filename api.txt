@@ -1,0 +1,50 @@
+//==========================================================
+Swapi:
+
+Darth Vader: https://swapi.dev/api/people/4/
+Planet Alderaan: https://swapi.dev/api/planets/2/
+Millennium Falcon: https://swapi.dev/api/starships/10/
+C-3PO: https://swapi.dev/api/people/2/
+species:https://swapi.dev/api/species/2/
+Obi-Wan Kenobi: https://swapi.dev/api/people/10/ 
+and films:
+        "https://swapi.dev/api/films/1/",
+        "https://swapi.dev/api/films/2/",
+        "https://swapi.dev/api/films/3/",
+        "https://swapi.dev/api/films/4/",
+        "https://swapi.dev/api/films/5/",
+        "https://swapi.dev/api/films/6/"
+
+//===========================================================
+
+Social Mountain: 
+Q: Check if the POST request accept params, queries, and/or a body. What inforamtion is expecting to be sent? 
+A: Post essentailly creates a new post, with a name and text paramater, with the body as the post in text. So, it accepts a paramter, and a body.
+
+Q: What data type does the GET request return?
+A: it returns an array of all the posts.
+
+Q: What would the URL look like for deleting the post with the id 555? (This post does not exist anymore, but the syntax is the same for existing posts, )
+A: https://practiceapi.devmountain.com/api/posts?id=555 (.get .post ect. can have the same url, but the .get and .post is what differentiates what to do with the inforamtion, so in order to actually delete you would need to use .delete)
+
+Q: List the possible response codes from the GET request at ‘/posts/filter’
+A: The possible response codes are anything you type in as the filter. For example if you type "hello" for the parameter text all the texts containing hello will show up in the filter. example: (https://practiceapi.devmountain.com/api/posts/filter?text=hello)
+
+Q: Create a post whose text is your name, record the URL and body here:
+A: https://practiceapi.devmountain.com/api/posts/filter?text=kira https://practiceapi.devmountain.com/api/posts?id=1395 body=kira 
+
+Q: What would the URL and body object be to update the post you just made to contain your faovrite color instead of your name?
+A: The request would be https://practiceapi.devmountain.com/api/posts?id=1395 and the text would be what you want updated, for me that would be {"text": "black"}
+
+Q: What is the URL to get posts that contain the text “blue”?
+A: https://practiceapi.devmountain.com/api/posts/filter?text=blue
+
+Q: Make a request to GET all the posts. What are the content type and charset of the response? (Hint: look on the Headers)
+A: https://practiceapi.devmountain.com/api/posts
+
+Q: What would cause a PUT request to return a 409 status?
+A: If it was missing an id or a body request it would return a 404
+
+Q: What happens if you try to send a query in the GET request URL? Why do you get that response?
+A: It returns all the posts instead of a specfic post. Since it doesn't have any required text fields, any query you send will not be read, and so nothing you put in the query will return a 404. It will only list everything it has. becuase that's what the backend does. It isn't programmed to accpet a query in that way.
+

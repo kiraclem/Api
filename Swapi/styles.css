@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(61, 61, 61);
+    padding: 50px;
+}
+
+div {
+    color: rgb(255, 187, 0);
+}
+button {
+    background-color: black;
+    color: yellow;
+    border-style: solid;
+}
